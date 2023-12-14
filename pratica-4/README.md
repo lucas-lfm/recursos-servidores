@@ -29,6 +29,9 @@ Neste repositório, na pasta [`sites`](pratica-4/sites) vocês encontrarão dois
    >[!NOTE]
    >Percebam que dentro do diretório de cada sites de exemplo tem um subdiretório chamado `public_html`. Esse é um padrão adotado profisisonalmente em serviços de hospedagens de sites, mantendo todo o conteúdo do site a ser provdido em uma pasta padrão, nomeada por convenção.
 
+> [!NOTE]  
+> Highlights information that users should take into account, even when skimming.
+
 5. Agora é necessário definir corretamente as permissões para as pastas criadas para que o usuário logado consiga manipulá-las corretamente, bem como o serviço apache2. Para isso, faça o seguinte:
 
    - Adicione o usuário do apache ao grupo do usuário que está logado: `$ sudo usermod -a -G www-data $USER`
