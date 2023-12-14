@@ -13,9 +13,9 @@ Neste repositório, na pasta [`sites`](pratica-4/sites) vocês encontrarão dois
 3. Verifique o status do serviço apache2: `$ systemctl status apache2`
 
    - A saída deve ser semelhante à imagem abaixo, mostrando que o serviço está em execução.
-     <img src="imagens/apache1.png">
+     <img src="imagens/img1.png">
    - Você também pode verificar se deu tudo certo acessando o IP do servidor pelo navegador de uma máquina cliente na rede interna ou pelo IP do servidor, acessível pela rede externa, no navegador de nossa máquina física (já que estamos utilizando máquina virtual). Você deve conseguir acessar uma página semelhante a essa:
-     <img src="imagens/apache2.png">
+     <img src="imagens/img2.png">
 
 4. Agora seria o momento de criar os diretórios para armazernar e organizar os recursos dos nossos sites. No Unbuntu Server, esses diretórios devem ser colocados na pasta `/var/www/`. Então, se queremos hospedar um site chamado `site1.com` devemos criar um diretório para ele dentro dessa pasta, como por exemplo: `/var/www/site1.com/`. No entanto, vocês podem simplesmente copiar os diretórios presentes neste repositório, na pasta `sites`:
 
@@ -35,6 +35,7 @@ Neste repositório, na pasta [`sites`](pratica-4/sites) vocês encontrarão dois
    - Altere o grupo proprietário da pasta `/var/www` para o grupo do apache: `$ sudo chown -R $USER:www-data /var/www`
      - Obs.: a variável $USER representa o usuário que está logado no momento
    - Por fim, vamos definir as permissões corretas para o usuário e para o grupo: `$ sudo chmod -R 775 /var/www`
+     
 > [!NOTE]
 > A permisão 775 indica que o usuário e o grupo donos do diretório tem acesso total e os demais usuário podem visualizar e executar (acessar o site), mas não podem alterar nenhum arquivo.
 
@@ -51,11 +52,11 @@ Neste repositório, na pasta [`sites`](pratica-4/sites) vocês encontrarão dois
      
      - `festjoin.com.conf`:
        
-     <img src="imagens/apache3.png">
+     <img src="imagens/img3.png">
      
      - `series.com.conf`:
        
-     <img src="imagens/apache3.png">
+     <img src="imagens/img4.png">
    
    - Explicando resumidamente precisamos definir um `ServerName` (nome de dóminio do servidor), geralmente colocando o nome de domínio do nosso site, por exemplo `festjoin.com` e um `ServerAlias` (apelido ou outro endereço associado), por exemplo `www.festjoin.com`. Ainda é necessário indicar o diretório raiz do nosso sites (onde o apache vai prover os arquivos), por exemplo `/var/www/festjoin.com/public_html`. Por fim, indicamos o email do administrador do site em `ServerAdmin` e definimos os locais dos logs de erro, _warnings_ e etc.
 
@@ -70,11 +71,13 @@ Neste repositório, na pasta [`sites`](pratica-4/sites) vocês encontrarão dois
 
 - Em caso de receber somente a mensagem `Syntax OK`, significa que não foram encontrados erros nos arquivos de configuração.
 - Porém, é comum aparecer a seguinte mensagem:
-  <img src="imagens/apache5.png">
+  <img src="imagens/img5.png">
   - Se esse for o seu caso, acesso o arquivo `servername.conf` e adicione seu nome de domínio: `$ sudo nano /etc/apache2/conf-available/servername.conf`
   - Adicione a seguinte linha no arquivo e salve: `Servername localhost`
+
 > [!NOTE]
 > Se tivéssemos um nome de dóminio válido públicamente, poderíamos colocar aqui.
+
   - Em seguida, ative a nova configuração: `$ sudo a2enconf servername`
   - Por fim, reinicie o serviço apache2: `$ sudo systemctl restart apache2`
 
@@ -89,5 +92,6 @@ Neste repositório, na pasta [`sites`](pratica-4/sites) vocês encontrarão dois
     - `IP_SERVIDOR series.com`
   - Sistemas Windows:
     - Abra o bloco de notas como administrador e abra o arquivo `C:\Windows\System32\drivers\etc\hosts` e insira as linhas indicadas anteriormente
+
 > [!NOTE]
 > lembre-se de substituir `IP_SERVIDOR` pelo IP correto do servidor (IP externo, se testar na máquina física, IP interno ao testar em uma máquina virtual cliente na rede interna)
