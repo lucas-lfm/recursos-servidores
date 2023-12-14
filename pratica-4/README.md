@@ -20,7 +20,7 @@ Neste repositório, na pasta [`sites`](pratica-4/sites) vocês encontrarão dois
 4. Agora seria o momento de criar os diretórios para armazernar e organizar os recursos dos nossos sites. No Unbuntu Server, esses diretórios devem ser colocados na pasta `/var/www/`. Então, se queremos hospedar um site chamado `site1.com` devemos criar um diretório para ele dentro dessa pasta, como por exemplo: `/var/www/site1.com/`. No entanto, vocês podem simplesmente copiar os diretórios presentes neste repositório, na pasta `sites`:
 
    - Com o repositório atualizado na máquina servidora:
-     - `$ sudo cp -r ~/recursos-servidores/pratica-4/sites/festjoin.com /var/www/`
+     - `$ sudo cp -r pratica-4/sites/festjoin.com /var/www/`
      - `$ sudo cp -r pratica-4/sites/series.com /var/www/`
    - Verifique o conteúdo dos diretórios copiados para a pasta `/var/www/`:
      - `$ sudo ls /var/www/festjoin.com`
