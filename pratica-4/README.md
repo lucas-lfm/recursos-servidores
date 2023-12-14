@@ -11,6 +11,6 @@ Neste repositório, na pasta [`sites`](pratica-4/sites) vocês encontrarão dois
 3. Verifique o status do serviço apache2: `$ systemctl status apache2`
    
    > A saída deve ser semelhante à imagem abaixo, mostrando que o serviço está em execução.
-   ![screen](pratica-4/imagens/apache1.png)
+   <img src="/pratica-4/imagens/apache1.png">
 
 5. 
