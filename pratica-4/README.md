@@ -65,7 +65,7 @@ Neste repositório, na pasta [`sites`](pratica-4/sites) vocês encontrarão dois
 - `$ sudo a2ensite festjoin.com.conf`
 - `$ sudo a2ensite series.com.conf`
 
-9. Reinicie o apache: `$ sudo systemctl restart apache2 restart`
+9. Reinicie o apache: `$ sudo systemctl restart apache2`
 
 10. Teste as configurações: `$ sudo apache2ctl configtest`
 
