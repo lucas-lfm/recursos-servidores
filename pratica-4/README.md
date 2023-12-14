@@ -7,3 +7,10 @@ Neste repositório, na pasta [`sites`](pratica-4/sites) vocês encontrarão dois
 1. Atualize os repositórios do sistema: `$ sudo apt update`
 
 2. Instale o Apache HTTP Server: `$ sudo apt install apache2`
+
+3. Verifique o status do serviço apache2: `$ systemctl status apache2`
+   
+   > A saída deve ser semelhante à imagem abaixo, mostrando que o serviço está em execução.
+   > 
+
+5. 
