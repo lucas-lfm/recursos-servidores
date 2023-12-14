@@ -26,8 +26,8 @@ Neste repositório, na pasta [`sites`](pratica-4/sites) vocês encontrarão dois
      - `$ sudo ls /var/www/festjoin.com`
      - `$ sudo ls /var/www/series.com`
 
-   > [!NOTE]
-   > Percebam que dentro do diretório de cada sites de exemplo tem um subdiretório chamado `public_html`. Esse é um padrão adotado profisisonalmente em serviços de hospedagens de sites, mantendo todo o conteúdo do site a ser provdido em uma pasta padrão, nomeada por convenção.
+   >[!NOTE]
+   >Percebam que dentro do diretório de cada sites de exemplo tem um subdiretório chamado `public_html`. Esse é um padrão adotado profisisonalmente em serviços de hospedagens de sites, mantendo todo o conteúdo do site a ser provdido em uma pasta padrão, nomeada por convenção.
 
 5. Agora é necessário definir corretamente as permissões para as pastas criadas para que o usuário logado consiga manipulá-las corretamente, bem como o serviço apache2. Para isso, faça o seguinte:
 
