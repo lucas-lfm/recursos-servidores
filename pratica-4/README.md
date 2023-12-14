@@ -10,7 +10,10 @@ Neste repositório, na pasta [`sites`](pratica-4/sites) vocês encontrarão dois
 
 3. Verifique o status do serviço apache2: `$ systemctl status apache2`
    
-   > A saída deve ser semelhante à imagem abaixo, mostrando que o serviço está em execução.
-   <img src="/pratica-4/imagens/apache1.png">
+> A saída deve ser semelhante à imagem abaixo, mostrando que o serviço está em execução.
+<img src="/pratica-4/imagens/apache1.png">
 
-5. 
+4. Agora seria o momento de criar os diretórios para armazernar e organizar os recursos dos nossos sites. No Unbuntu Server, esses diretórios devem ser colocados na pasta `/var/www/`. Então, se queremos hospedar um site chamado `site1.com` devemos criar um diretório para ele dentro dessa pasta, como por exemplo: `/var/www/site1.com/`. No entanto, vocês podem simplesmente copiar os diretórios presentes neste repositório, na pasta `sites`:
+
+> Dentro da pasta `recursos-servidores`, com o repositório atualizado:
+>> `$ sudo cp pratica-4/sites/`
