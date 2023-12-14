@@ -41,7 +41,7 @@ Neste repositório, na pasta [`sites`](pratica-4/sites) vocês encontrarão dois
 
 ## Configuração dos arquivos de Virtual Hosts
 
-6. Nesse ponto, já temos as configurações básicas aplicadas para nosso servidor, porém ainda não conseguimos acessar individualmente cada site. Precisamos então configurar os **Os Hosts Virtuais** para nossos sites. Os arquivos de de `Virtual Hosts` são responsáveis pela configuração de cada domínio que queremos hospedar em nosso servidor. Logo, com essa abordagem, conseguimos hospedar vários sites com diferentes domínios em um mesmo servidor (isso é o que ocorre normalmente em servidores online).
+6. Nesse ponto, já temos as configurações básicas aplicadas para nosso servidor, porém ainda não conseguimos acessar individualmente cada site. Precisamos então configurar os **Os Hosts Virtuais** para nossos sites. Os arquivos de `Virtual Hosts` são responsáveis pela configuração de cada domínio que queremos hospedar em nosso servidor. Logo, com essa abordagem, conseguimos hospedar vários sites com diferentes domínios em um mesmo servidor (isso é o que ocorre normalmente em servidores online).
 
 7. O apache já vem com um arquivo de configuração padrão para **Virtual Host**. Poderíamos então, copiar esse arquivo para aproveitá-lo como base para a configuração de cada site, por exemplo para o site `festjoin.com`: `$ sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/festjoin.com.conf`
 
