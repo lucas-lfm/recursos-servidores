@@ -49,9 +49,9 @@ Neste repositório, na pasta [`sites`](pratica-4/sites) vocês encontrarão dois
      - `$ sudo cp -r ~/recursos-servidores/pratica-4/config/series.com.conf /etc/apache2/sites-available`
    - Os arquivos tem o seguintes conteúdo:
      - `festjoin.com.conf`:
-       <img src="imagens/apache3.png">
+     <img src="imagens/apache3.png">
      - `series.com.conf`:
-       <img src="imagens/apache3.png">
+     <img src="imagens/apache3.png">
    - Explicando resumidamente precisamos definir um `ServerName` (nome de dóminio do servidor), geralmente colocando o nome de domínio do nosso site, por exemplo `festjoin.com` e um `ServerAlias` (apelido ou outro endereço associado), por exemplo `www.festjoin.com`. Ainda é necessário indicar o diretório raiz do nosso sites (onde o apache vai prover os arquivos), por exemplo `/var/www/festjoin.com/public_html`. Por fim, indicamos o email do administrador do site em `ServerAdmin` e definimos os locais dos logs de erro, _warnings_ e etc.
 
 8. Ative os arquivos de virtual host com os comandos:
