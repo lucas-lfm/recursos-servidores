@@ -35,7 +35,8 @@ Neste repositório, na pasta [`sites`](pratica-4/sites) vocês encontrarão dois
    - Altere o grupo proprietário da pasta `/var/www` para o grupo do apache: `$ sudo chown -R $USER:www-data /var/www`
      - Obs.: a variável $USER representa o usuário que está logado no momento
    - Por fim, vamos definir as permissões corretas para o usuário e para o grupo: `$ sudo chmod -R 775 /var/www`
-     - Obs.: a permisão 775 indica que o usuário e o grupo donos do diretório tem acesso total e os demais usuário podem visualizar e executar (acessar o site), mas não podem alterar nenhum arquivo.
+> [!NOTE]
+> A permisão 775 indica que o usuário e o grupo donos do diretório tem acesso total e os demais usuário podem visualizar e executar (acessar o site), mas não podem alterar nenhum arquivo.
 
 ## Configuração dos arquivos de Virtual Hosts
 
@@ -67,8 +68,8 @@ Neste repositório, na pasta [`sites`](pratica-4/sites) vocês encontrarão dois
   <img src="imagens/apache5.png">
   - Se esse for o seu caso, acesso o arquivo `servername.conf` e adicione seu nome de domínio: `$ sudo nano /etc/apache2/conf-available/servername.conf`
   - Adicione a seguinte linha no arquivo e salve: `Servername localhost`
-    > [!NOTE]
-    > Se tivéssemos um nome de dóminio válido públicamente, poderíamos colocar aqui.
+> [!NOTE]
+> Se tivéssemos um nome de dóminio válido públicamente, poderíamos colocar aqui.
   - Em seguida, ative a nova configuração: `$ sudo a2enconf servername`
   - Por fim, reinicie o serviço apache2: `$ sudo systemctl restart apache2`
 
@@ -83,4 +84,5 @@ Neste repositório, na pasta [`sites`](pratica-4/sites) vocês encontrarão dois
     - `IP_SERVIDOR series.com`
   - Sistemas Windows:
     - Abra o bloco de notas como administrador e abra o arquivo `C:\Windows\System32\drivers\etc\hosts` e insira as linhas indicadas anteriormente
-  - Obs.: lembre-se de substituir `IP_SERVIDOR` pelo IP correto do servidor (IP externo, se testar na máquina física, IP interno ao testar em uma máquina virtual cliente na rede interna)
+> [!NOTE]
+> lembre-se de substituir `IP_SERVIDOR` pelo IP correto do servidor (IP externo, se testar na máquina física, IP interno ao testar em uma máquina virtual cliente na rede interna)
